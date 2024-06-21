@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+	<title>sun</title>
+	<defs>
+		<image  width="32" height="32" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAAXNSR0IB2cksfwAAAJxQTFRF/////9JG/9JG/9FG/9NG//8A/9NH/9RI/9ZF/9FH/9NH/9JE/8Y5/79A/9NG/9RH/9NH/89E/8s+/8c6/8U4/8g5/9ND/9RH/9NH/89C/8A0/8I2/8U6/9RH/9VK/9NF/9NH/9JF/8Q3/78y/8Y5/9NG/8E0/85C/74x/8Y5/8w//8Q4/9BE/8I1//+A/9NH/78y/8Ay/9FG/9NH2kUmBwAAADR0Uk5TAFt4FqMBxlklMtYiCQRMjcH1+ODKgRew////5yzfGEbs///+ef///////8z/8ALz//4hrUsVFBQAAAEMSURBVHicjZPBTsMwDIb/v9loV2ADhAoneAIQgvd/BBDSxG0nNA4wcaqAFpoGtV1onG2kvlh2PsV/YpuQRhg/IS1CvR1QrAQwMloCY7JsfIKicbExP16JCT+di1PztaFh/8MB+sAXecB8Q6SK1uUwZWcrK6zWDTCKVFswY3ddgyxbWbqu2hJxxmfgksWfXnIBXJi30tGQpfYcOKQul77IM1fujPmLB0xTof3YvK8kMJsI4KRWTxI4SgRwWo3nsG/CXoFrvgoA51zkSL5hwkCwxFCRwWcGP+rfr45Vqbc0S8W6a1aw3bfznQNz9TBo5NamtJPug8FjH1wcdXPfert6d4/e6lnbubx97K3/L/sbZiMQwkHTAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+	</style>
+	<use id="Background" href="#img1" x="0" y="0"/>
+</svg>
