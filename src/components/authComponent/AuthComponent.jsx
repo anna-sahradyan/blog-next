@@ -1,10 +1,22 @@
 'use client'
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Link from "next/link";
 import s from './authLinks.module.css';
 
 const AuthComponent = () => {
     const [open, setOpen] = useState(false);
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth > 640) {
+                setOpen(false);
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
     const status = 'falseworld'
     return (
         <>
