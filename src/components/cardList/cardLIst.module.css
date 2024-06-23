@@ -1,0 +1,8 @@
+.container {
+    flex: 5;
+}
+.imgBox{
+    flex: 1;
+    height: 500px;
+    position: relative;
+}

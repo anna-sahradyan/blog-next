@@ -18,10 +18,10 @@ const Header = () => {
             <div className={s.logo}>AnnaBlog</div>
             <div className={s.menu}>
                 <ThemeSwitch/>
-                <Link href={'/'}>Home</Link>
-                <Link href={'/'}>Contacts</Link>
-                <Link href={'/'}>About</Link>
-               <AuthComponent/>
+                <Link href={'/'} className={s.menuItem}>Home</Link>
+                <Link href={'/'} className={s.menuItem}>Contacts</Link>
+                <Link href={'/'} className={s.menuItem}>About</Link>
+                <AuthComponent/>
             </div>
         </div>
     );
