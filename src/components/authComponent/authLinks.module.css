@@ -21,25 +21,25 @@
 }
 .resMenu{
     position: absolute;
-    top: 100px;
+    top: 90px;
     left: 0;
-    background-color: var(--bg);
-    height: calc(100vh - 100px);
+    background-color:#F0F8FF;
+    height: calc(100vh - 90px);
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    gap: 30px;
     font-size: 36px;
-    z-index: 999;
+    z-index: 9999;
 }
 @media screen and (max-width: 640px) {
-
     .burger {
         display: flex;
     }
     .menuItem{
         display: none;
     }
+
 }

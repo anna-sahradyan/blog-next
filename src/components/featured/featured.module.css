@@ -1,9 +1,10 @@
 .container {
     margin-top: 30px;
+
 }
 
 .title {
-    margin-top: 40px;
+    margin-top: 50px;
     font-size: 96px;
     font-weight: bold;
 }
@@ -30,6 +31,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+
 }
 
 
@@ -68,9 +70,16 @@
     .title {
         font-size: 48px;
     }
+    .postTitle {
+        font-size: 28px;
+    }
 }
 @media screen and (max-width:640px) {
+
     .title {
         font-size: 36px;
+    }
+    .btn{
+        margin-top: 20px;
     }
 }

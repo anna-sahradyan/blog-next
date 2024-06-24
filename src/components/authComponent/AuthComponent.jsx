@@ -1,10 +1,12 @@
 'use client'
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import Link from "next/link";
 import s from './authLinks.module.css';
+import {ThemeContext} from "@/context/ThemeContext";
 
 const AuthComponent = () => {
     const [open, setOpen] = useState(false);
+    const {theme} = useContext(ThemeContext)
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth > 640) {
@@ -40,7 +42,8 @@ const AuthComponent = () => {
                 <div className={s.line}></div>
             </div>
             {open && (
-                <div className={s.resMenu}>
+                <div className={s.resMenu}
+                     style={{ backgroundColor: theme === 'dark' ? '#0f172a' : '#F0F8FF' }}>
                     <Link href="/">Homepage</Link>
                     <Link href="/">About</Link>
                     <Link href="/">Contact</Link>
