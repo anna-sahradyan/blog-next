@@ -21,7 +21,7 @@ const SinglePage = () => {
                     </div>
                 </div>
                 <div className={s.imageBox}>
-                    <Image src={'/img/coun2.webp'} alt={'country'} fill className={s.img}/>
+                    <Image src={'/img/coun2.webp'} alt={'country'} fill className={s.img} />
                 </div>
             </div>
             <div className={s.content}>
@@ -32,7 +32,9 @@ const SinglePage = () => {
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aut debitis, harum hic iste laborum necessitatibus nostrum numquam omnis pariatur perferendis possimus quasi qui quisquam ratione recusandae sed unde velit!</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aut deserunt ea enim fugit, hic id nihil non officiis omnis optio quisquam repellat repellendus velit voluptas! Amet ex provident vero!</p>
                     </div>
-                    <Comments/>
+                    <div className={s.comment}>
+                      <Comments/>
+                    </div>
                 </div>
                 <Menu/>
             </div>

@@ -19,10 +19,10 @@ const AuthComponent = () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
-    const status = 'falseworld'
+    const status = 'notauthenticated'
     return (
         <>
-            {status === "falseworld" ? (
+            {status === "notauthenticated" ? (
                 <Link href="/login" className={s.link}>
                     Login
                 </Link>

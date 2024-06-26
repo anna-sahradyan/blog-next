@@ -24,7 +24,8 @@
     top: 90px;
     left: 0;
     background-color:#F0F8FF;
-    height: calc(100vh - 90px);
+    /*height: calc(100vh - 90px);*/
+    min-height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;

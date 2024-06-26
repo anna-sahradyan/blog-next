@@ -8,6 +8,7 @@
     font-size: 96px;
     font-weight: bold;
 }
+
 .post {
     margin-top: 60px;
     display: flex;
@@ -52,16 +53,19 @@
     border-radius: 5px;
     width: max-content;
 }
+
 @media screen and (max-width: 1280px) {
     .title {
         font-size: 72px;
     }
 }
+
 @media screen and (max-width: 1024px) {
     .title {
         font-size: 64px;
     }
-    .imgBox{
+
+    .imgBox {
         display: none;
     }
 }
@@ -70,16 +74,21 @@
     .title {
         font-size: 48px;
     }
+
     .postTitle {
         font-size: 28px;
     }
 }
-@media screen and (max-width:640px) {
 
-    .title {
-        font-size: 36px;
+@media screen and (max-width: 640px) {
+    .textBox {
+        margin-top: 25px;
     }
-    .btn{
+    .title {
+        font-size: 28px;
+    }
+
+    .btn {
         margin-top: 20px;
     }
 }
