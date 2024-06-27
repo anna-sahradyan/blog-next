@@ -287,12 +287,14 @@ body {
     --softBg: #1f273a;
     --softTextColor: #a6a6a6;
 }
+
 .light {
     --bg: var(--bg);
     --textColor: black;
     --softBg: #f0f0f0;
     --softTextColor: #626262;
 }
+
 .container {
     min-height: 100vh;
     color: var(--textColor);
@@ -308,6 +310,15 @@ body {
     padding: 40px;
     border: 1px solid black;
 }
+
+.ql-container {
+    font-size: 28px !important;
+}
+
+.quill > .ql-container > .ql-editor.ql-blank::before {
+    color: #b3b3b1;
+}
+
 
 @media screen and (max-width: 1536px) {
     .wrapper {

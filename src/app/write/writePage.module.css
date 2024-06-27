@@ -1,21 +1,80 @@
 .container {
-
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .editor {
+    display: flex;
+    gap: 20px;
+    height: 700px;
+    position: relative;
+}
+
+.textEditor {
+    width: 100%;
+    margin-top: 30px;
 
 }
 
 .input {
-
-}
-
-.btn {
-    border: 0;
+    padding: 50px;
+    font-size: 64px;
+    border: none;
+    color: #b3b3b1;
     outline: none;
     background-color: inherit;
 }
 
+.input::placeholder {
+    color: #b3b3b1;
+}
+
+.btn, .addBtn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: inherit;
+    border: 1px solid var(--textColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.addBtn {
+    border: 1px solid #1a8917;
+}
+.btnPublish{
+    /*outline: none;*/
+    /*border: none;*/
+    /*position: absolute;*/
+    /*top: 45px;*/
+    /*right: 100px;*/
+    /*padding: 10px 20px;*/
+    /*background-color: #1a8917;*/
+    /*color: white;*/
+    /*border-radius: 20px;*/
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 20px;
+    border: none;
+    background-color: #1a8917;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+}
 .img {
 
+}
+
+.add {
+    display: flex;
+    gap: 20px;
+    background-color: var(--bg);
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    left: 50px;
 }
