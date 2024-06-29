@@ -47,7 +47,7 @@ const AuthComponent = () => {
                     <Link href="/">Homepage</Link>
                     <Link href="/">About</Link>
                     <Link href="/">Contact</Link>
-                    {status === "falseworld" ? (
+                    {status === "notauthenticated" ? (
                         <Link href="/login">Login</Link>
                     ) : (
                         <>

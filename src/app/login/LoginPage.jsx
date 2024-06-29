@@ -1,7 +1,8 @@
+"use client"
 import React from 'react';
 import s from './loginPage.module.css';
 
-const Page = () => {
+const LoginPage = () => {
     return (
         <div className={s.container}>
             <div className={s.wrapper}>
@@ -14,4 +15,4 @@ const Page = () => {
     );
 };
 
-export default Page;
+export default LoginPage;
