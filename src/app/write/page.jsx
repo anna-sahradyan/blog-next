@@ -1,7 +1,7 @@
 "use client";
 import s from './writePage.module.css';
 import Image from "next/image";
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import ReactQuill from "react-quill";
 import 'quill/dist/quill.bubble.css';
 import 'react-quill/dist/quill.snow.css';
@@ -22,6 +22,11 @@ const WritePage = () => {
     if (status === "unauthenticated") {
         return null;
     }
+
+    if (status === "loading") {
+        return <div className={s.loading}>Loading...</div>;
+    }
+
     return (
         <div className={s.container}>
             <input type="text" placeholder={'Title'} className={s.input}/>
