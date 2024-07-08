@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b48fa4f9-01f1-4053-881a-2ab100005eb9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/api/categories/route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/categoryList/CategoryList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/categoryList/CategoryList.jsx" afterDir="false" />
-    </list>
+    <list default="true" id="b48fa4f9-01f1-4053-881a-2ab100005eb9" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,6 +89,7 @@
       <workItem from="1719825415437" duration="5767000" />
       <workItem from="1720177483093" duration="2210000" />
       <workItem from="1720257220964" duration="594000" />
+      <workItem from="1720270963365" duration="2754000" />
     </task>
     <servers />
   </component>
