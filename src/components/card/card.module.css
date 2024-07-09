@@ -23,6 +23,7 @@
 
 .date {
     color: var(--softTextColor);
+    font-family: 'Arial';
 }
 
 .title {

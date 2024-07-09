@@ -2,20 +2,31 @@ import {NextResponse} from "next/server";
 import prisma from "@/utils/connect";
 
 export const GET = async (req) => {
-    const {searchParams} = new URL(req.url);
-
-    const page = searchParams.get("page");
+    const { searchParams } = new URL(req.url);
+    const page = parseInt(searchParams.get("page") || "1", 10);
     const POST_PER_PAGE = 2;
+    const skip = POST_PER_PAGE * (page - 1);
+
     try {
         const posts = await prisma.post.findMany({
-            take: POST_PER_PAGE, skip: POST_PER_PAGE * (page - 1)
+            take: POST_PER_PAGE,
+            skip: skip,
         });
 
-        return new NextResponse(JSON.stringify(posts, {status: 200}));
+        const totalPosts = await prisma.post.count();
+
+        const hasPrev = page > 1;
+        const hasNext = skip + POST_PER_PAGE < totalPosts;
+
+        return new NextResponse(JSON.stringify({
+            data: posts,
+            hasPrev: hasPrev,
+            hasNext: hasNext
+        }), { status: 200 });
     } catch (err) {
         console.log(err);
         return new NextResponse(
-            JSON.stringify({message: "Something went wrong!"}, {status: 500})
+            JSON.stringify({ message: "Something went wrong!" }, { status: 500 })
         );
     }
 };

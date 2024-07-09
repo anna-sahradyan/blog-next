@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Card = ({item}) => {
+    const createdAt = new Date(item.createdAt);
     return (
         <div className={s.container}>
             <div className={s.imgBox}>
@@ -12,7 +13,7 @@ const Card = ({item}) => {
             </div>
             <div className={s.textBox}>
                 <div className={s.items}>
-                    <span className={s.date}>{item.createdAt} </span>
+                    <span className={s.date}>{createdAt.toLocaleDateString()} </span>
                     <span className={s.category}>{item.catSlug}</span>
                 </div>
                 <Link href={'/'}> <h2 className={s.title}>{item.title} </h2></Link>

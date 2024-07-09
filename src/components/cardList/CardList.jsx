@@ -21,11 +21,15 @@ const getData = async (page) => {
 
 const CardList = ({ page }) => {
     const [data, setData] = useState([]);
+    const [hasPrev, setHasPrev] = useState(false);
+    const [hasNext, setHasNext] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
             const result = await getData(page);
-            setData(result);
+            setData(result.data);
+            setHasPrev(result.hasPrev);
+            setHasNext(result.hasNext);
         };
 
         fetchData();
@@ -39,7 +43,7 @@ const CardList = ({ page }) => {
                     <Card key={item._id} item={item} />
                 ))}
             </div>
-            <Pagination page={page} />
+            <Pagination page={page} hasPrev={hasPrev} hasNext={hasNext} />
         </div>
     );
 };
