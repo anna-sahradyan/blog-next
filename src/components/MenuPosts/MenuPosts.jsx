@@ -10,7 +10,8 @@ const MenuPosts = ({withImage}) => {
             <div className={s.items}>
                 <Link href={'/'} className={s.item}>
                     {withImage && (<div className={s.imgBox}>
-                        <Image src={'/img/pic1.webp'} alt={'picture'} fill sizes={'(max-width:600px) 100vw ,50vw'}
+                        <Image src={'/img/pic1.webp'} alt={'picture'} fill
+                               priority  sizes={'(max-width:600px) 100vw ,50vw'}
                                className={s.img}/>
                     </div>
                     )}
@@ -25,7 +26,7 @@ const MenuPosts = ({withImage}) => {
                 </Link>
                 <Link href={'/'} className={s.item}>
                     {withImage && (  <div className={s.imgBox}>
-                        <Image src={'/img/pic1.webp'} alt={'picture'} fill sizes={'(max-width:600px) 100vw ,50vw'}
+                        <Image src={'/img/pic1.webp'} alt={'picture'} fill sizes={'(max-width:600px) 100vw ,50vw'} priority
                                className={s.img}/>
                     </div>)}
                     <div className={s.textBox}>

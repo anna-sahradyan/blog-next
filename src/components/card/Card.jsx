@@ -18,9 +18,9 @@ const Card = ({item}) => {
                     <span className={s.date}>{createdAt}</span>
                     <span className={s.category}>{item.catSlug}</span>
                 </div>
-                <Link href={`/post/${item.slug}`}> <h2 className={s.title}>{item.title} </h2></Link>
+                <Link href={`/posts/${item.slug}`}> <h2 className={s.title}>{item.title} </h2></Link>
                 <p className={s.desc}>Desc {item.desc.substring(0,60)}</p>
-                <Link href={`/post/${item.slug}`} className={s.link}>
+                <Link href={`/posts/${item.slug}`} className={s.link}>
                     Read More
                 </Link>
             </div>
