@@ -36,6 +36,13 @@
     font-weight: 500;
 }
 
+.items {
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+
 .desc {
     font-size: 18px;
     font-weight: 300;

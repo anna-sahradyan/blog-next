@@ -33,7 +33,7 @@ const CardList = ({ page ,cat}) => {
         };
 
         fetchData();
-    }, [page]);
+    }, [page,cat]);
 
     return (
         <div className={s.container}>
