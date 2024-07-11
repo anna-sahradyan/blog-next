@@ -4,9 +4,9 @@ import Pagination from "@/components/pagination/Pagination";
 import s from './cardLIst.module.css';
 import Card from "@/components/card/Card";
 
-const getData = async (page) => {
+const getData = async (page,cat) => {
     try {
-        const res = await fetch(`http://localhost:3000/api/posts?page=${page}`, {
+        const res = await fetch(`http://localhost:3000/api/posts?page=${page}&cat=${cat || ''}`, {
             cache: "no-store",
         });
         if (!res.ok) {
@@ -19,14 +19,14 @@ const getData = async (page) => {
     }
 };
 
-const CardList = ({ page }) => {
+const CardList = ({ page ,cat}) => {
     const [data, setData] = useState([]);
     const [hasPrev, setHasPrev] = useState(false);
     const [hasNext, setHasNext] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
-            const result = await getData(page);
+            const result = await getData(page,cat);
             setData(result.data);
             setHasPrev(result.hasPrev);
             setHasNext(result.hasNext);
@@ -40,7 +40,7 @@ const CardList = ({ page }) => {
             <h2 className={s.title}>Recent Posts</h2>
             <div className={s.posts}>
                 {data?.map((item) => (
-                    <Card key={item._id} item={item} />
+                    <Card key={item.id} item={item} />
                 ))}
             </div>
             <Pagination page={page} hasPrev={hasPrev} hasNext={hasNext} />
