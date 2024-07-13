@@ -34,7 +34,6 @@ const SinglePage = ({params}) => {
     if (loading) return <div>Loading...</div>;
     if (error) return <div>Error: {error}</div>;
     const createdAt = data.createdAt.substring(0, 10);
-    console.log(data?.user.image)
     return (
         <div className={s.container}>
             <div className={s.infoContainer}>
@@ -46,8 +45,8 @@ const SinglePage = ({params}) => {
                                 <Image
                                     src={data.user.image}
                                     alt="User Image"
-                                    fill
-                                    priority
+                                    fill={true}
+                                    priority={true}
                                     className={s.avatar}
                                 />
                             )}
@@ -59,8 +58,10 @@ const SinglePage = ({params}) => {
                     </div>
                 </div>
                 <div className={s.imageBox}>
-                    <Image src={'/img/coun2.webp'} alt={'country'} fill
-                           priority
+                    <Image src={'/img/coun2.webp'}
+                           alt={'country'}
+                           fill={true}
+                           priority={true}
                            className={s.img}/>
                 </div>
             </div>
@@ -68,7 +69,7 @@ const SinglePage = ({params}) => {
                 <div className={s.post}>
                     <div className={s.desc} dangerouslySetInnerHTML={{__html: data?.desc}}/>
                     <div className={s.comment}>
-                        <Comments/>
+                        <Comments postSlug={slug}/>
                     </div>
                 </div>
                 <Menu/>

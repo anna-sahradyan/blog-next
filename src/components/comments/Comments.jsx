@@ -1,10 +1,27 @@
+'use client';
 import React from 'react';
 import s from './comments.module.css';
 import Link from "next/link";
 import Image from "next/image";
+import {useSession} from "next-auth/react";
+import useSWR from "swr";
 
-const Comments = () => {
-    const status = 'authenticated';
+
+const fetcher = async (url) => {
+    const res = await fetch(url);
+    const data = await res.json();
+
+    if (!res.ok) {
+        const error = new Error(data.message);
+        throw error;
+    }
+
+    return data;
+};
+const Comments = ({postSlug}) => {
+    const {status} = useSession();
+    const {data, isLoading} = useSWR(`http://localhost:3000/api/comments?postSlug=${postSlug}`, fetcher)
+    console.log(data)
     return (
         <div className={s.cointainer}>
             <h2 className={s.title}>Comments</h2>
@@ -14,49 +31,28 @@ const Comments = () => {
             </div>) : (<Link href={'/login'}>Login to write a comment</Link>
             )}
             <div className={s.comments}>
-                <div className={s.comment}>
-                    <div className={s.userBox}>
-                        <Image src={'/img/pic2.webp'} alt={'pic'} width={50} height={50} className={s.img}/>
-                        <div className={s.info}>
-                            <span className={s.usernmae}>John Doe</span>
-                            <span className={s.date}>6.25.2024</span>
+                {isLoading ? 'loading' : data?.map((item) => (
+                        <div className={s.comment} key={item._id}>
+                            <div className={s.userBox}>
+                                {item?.user?.image &&
+                                    < Image src={item?.user?.image} alt={'pic'} width={50} height={50}
+                                            priority={true} className={s.img}/>}
+                                <div className={s.info}>
+                                    <span className={s.usernmae}>{item.user.name}</span>
+                                    <span className={s.date}>{item.createdAt.substring(0,10)}</span>
+                                </div>
+                            </div>
+                            <p className={s.desc}>{item.desc}
+                            </p>
                         </div>
-                    </div>
-                    <p className={s.desc}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut beatae dolorum,
-                        et eum fugit hic iure laboriosam magni minus mollitia neque placeat quo reprehenderit sit
-                        tempore tenetur ullam vel vero?</p>
-                </div>
+                    )
+                )}
+
             </div>
-            <div className={s.comments}>
-                <div className={s.comment}>
-                    <div className={s.userBox}>
-                        <Image src={'/img/pic2.webp'} alt={'pic'} width={50} height={50} className={s.img}/>
-                        <div className={s.info}>
-                            <span className={s.usernmae}>John Doe</span>
-                            <span className={s.date}>6.25.2024</span>
-                        </div>
-                    </div>
-                    <p className={s.desc}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut beatae dolorum,
-                        et eum fugit hic iure laboriosam magni minus mollitia neque placeat quo reprehenderit sit
-                        tempore tenetur ullam vel vero?</p>
-                </div>
-            </div>
-            <div className={s.comments}>
-                <div className={s.comment}>
-                    <div className={s.userBox}>
-                        <Image src={'/img/pic2.webp'} alt={'pic'} width={50} height={50} className={s.img}/>
-                        <div className={s.info}>
-                            <span className={s.usernmae}>John Doe</span>
-                            <span className={s.date}>6.25.2024</span>
-                        </div>
-                    </div>
-                    <p className={s.desc}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut beatae dolorum,
-                        et eum fugit hic iure laboriosam magni minus mollitia neque placeat quo reprehenderit sit
-                        tempore tenetur ullam vel vero?</p>
-                </div>
-            </div>
+
         </div>
-    );
+    )
+        ;
 };
 
 export default Comments;
