@@ -18,16 +18,29 @@ const fetcher = async (url) => {
 
     return data;
 };
+
 const Comments = ({postSlug}) => {
     const {status} = useSession();
-    const {data, isLoading} = useSWR(`http://localhost:3000/api/comments?postSlug=${postSlug}`, fetcher)
-    console.log(data)
+    const {data, mutate, isLoading} = useSWR(`http://localhost:3000/api/comments?postSlug=${postSlug}`, fetcher);
+    const [desc, setDesc] = React.useState('');
+    const handleSubmit = async () => {
+        await fetch(`/api/comments`, {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({desc, postSlug})
+        })
+        mutate();
+
+    }
     return (
         <div className={s.cointainer}>
             <h2 className={s.title}>Comments</h2>
             {status === 'authenticated' ? (<div className={s.write}>
-                <textarea placeholder={'write a comment ...'} className={s.input}/>
-                <button className={s.btn}>Send</button>
+                <textarea placeholder={'write a comment ...'} className={s.input}
+                          onChange={(e) => setDesc(e.target.value)}/>
+                <button className={s.btn} onClick={handleSubmit}>Send</button>
             </div>) : (<Link href={'/login'}>Login to write a comment</Link>
             )}
             <div className={s.comments}>
@@ -39,7 +52,7 @@ const Comments = ({postSlug}) => {
                                             priority={true} className={s.img}/>}
                                 <div className={s.info}>
                                     <span className={s.usernmae}>{item.user.name}</span>
-                                    <span className={s.date}>{item.createdAt.substring(0,10)}</span>
+                                    <span className={s.date}>{item.createdAt.substring(0, 10)}</span>
                                 </div>
                             </div>
                             <p className={s.desc}>{item.desc}
