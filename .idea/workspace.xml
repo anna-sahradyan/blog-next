@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b48fa4f9-01f1-4053-881a-2ab100005eb9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/utils/firebase.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/comments/route.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/comments/route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/posts/route.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/posts/route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/posts/[slug]/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/posts/[slug]/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/write/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/write/page.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/comments/Comments.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/comments/Comments.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +105,10 @@
       <workItem from="1720429678176" duration="3447000" />
       <workItem from="1720536693430" duration="3813000" />
       <workItem from="1720694242643" duration="13796000" />
-      <workItem from="1720877960093" duration="7816000" />
+      <workItem from="1720877960093" duration="8693000" />
+      <workItem from="1720962854512" duration="5060000" />
+      <workItem from="1720969067724" duration="305000" />
+      <workItem from="1720972797487" duration="2187000" />
     </task>
     <servers />
   </component>

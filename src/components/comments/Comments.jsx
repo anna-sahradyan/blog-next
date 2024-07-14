@@ -32,13 +32,15 @@ const Comments = ({postSlug}) => {
             body: JSON.stringify({desc, postSlug})
         })
         mutate();
-
+        setDesc(' ')
     }
     return (
         <div className={s.cointainer}>
             <h2 className={s.title}>Comments</h2>
             {status === 'authenticated' ? (<div className={s.write}>
-                <textarea placeholder={'write a comment ...'} className={s.input}
+                <textarea placeholder={'write a comment ...'}
+                          value={desc}
+                          className={s.input}
                           onChange={(e) => setDesc(e.target.value)}/>
                 <button className={s.btn} onClick={handleSubmit}>Send</button>
             </div>) : (<Link href={'/login'}>Login to write a comment</Link>

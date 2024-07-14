@@ -33,7 +33,7 @@ const SinglePage = ({params}) => {
 
     if (loading) return <div>Loading...</div>;
     if (error) return <div>Error: {error}</div>;
-    const createdAt = data.createdAt.substring(0, 10);
+    const createdAt = data?.createdAt ? data.createdAt.substring(0, 10) : 'Unknown Date';
     return (
         <div className={s.container}>
             <div className={s.infoContainer}>
