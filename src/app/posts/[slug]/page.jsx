@@ -10,7 +10,6 @@ const SinglePage = ({params}) => {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -58,7 +57,7 @@ const SinglePage = ({params}) => {
                     </div>
                 </div>
                 <div className={s.imageBox}>
-                    <Image src={'/img/coun2.webp'}
+                    <Image  src={data.img}
                            alt={'country'}
                            fill={true}
                            priority={true}
