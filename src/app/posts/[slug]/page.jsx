@@ -33,6 +33,7 @@ const SinglePage = ({params}) => {
     if (loading) return <div>Loading...</div>;
     if (error) return <div>Error: {error}</div>;
     const createdAt = data?.createdAt ? data.createdAt.substring(0, 10) : 'Unknown Date';
+    console.log(data.img)
     return (
         <div className={s.container}>
             <div className={s.infoContainer}>
@@ -42,7 +43,7 @@ const SinglePage = ({params}) => {
                         <div className={s.userImgBox}>
                             {data?.user.image && (
                                 <Image
-                                    src={data.user.image}
+                                    src={data?.user.image}
                                     alt="User Image"
                                     fill={true}
                                     priority={true}

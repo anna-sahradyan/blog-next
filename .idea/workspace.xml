@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b48fa4f9-01f1-4053-881a-2ab100005eb9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/posts/[slug]/route.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/posts/[slug]/route.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/posts/[slug]/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/posts/[slug]/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/card/Card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card/Card.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +104,9 @@
       <workItem from="1720877960093" duration="8693000" />
       <workItem from="1720962854512" duration="5060000" />
       <workItem from="1720969067724" duration="305000" />
-      <workItem from="1720972797487" duration="3888000" />
+      <workItem from="1720972797487" duration="4130000" />
+      <workItem from="1721121505592" duration="1449000" />
+      <workItem from="1721315701430" duration="2292000" />
     </task>
     <servers />
   </component>
